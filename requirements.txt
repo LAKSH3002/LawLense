@@ -1,0 +1,7 @@
+Issued faced while extracting data from website page are
+
+- Initially I extracted data from Indian kannon search results, where I was considering the top results 
+    - considering they are my desired links
+- But sometimes there were not articles on the top, and if some were there, they belong to some other articles
+
+- so thus I had to ensure I extract the exact number and in the text: "in Constituiton of data" is written.
