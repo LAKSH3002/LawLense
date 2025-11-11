@@ -5,3 +5,10 @@ Issued faced while extracting data from website page are
 - But sometimes there were not articles on the top, and if some were there, they belong to some other articles
 
 - so thus I had to ensure I extract the exact number and in the text: "in Constituiton of data" is written.
+
+Data Collection
+- Scraped 100 articles of the Constituiton from Indian Kanoon website with details of the articles
+(These articles has the rights, some cases and stuff)
+
+- Scraping some cases related to certain topics
+( The topics are rights [right to freedom] types, article based and some extra search query based)
