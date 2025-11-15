@@ -12,3 +12,8 @@ Data Collection
 
 - Scraping some cases related to certain topics
 ( The topics are rights [right to freedom] types, article based and some extra search query based)
+
+Data Collection Completed
+- 2 csv files
+1st: Data related to articles of the constitution
+2nd: Data related to cases related to queries given by user.
