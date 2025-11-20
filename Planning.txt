@@ -9,3 +9,15 @@ Phase 2 of the project
 Converting the data into embeddings
 Storing them in the vector Databases
 choosing a vector database
+
+Phase 3 of the project
+Load FAISS + article lookup
+Take a user query
+Convert query → embedding
+Search in FAISS
+Collect retrieved text
+Feed them to an LLM
+Generate an answer
+
+Industry Pipeline to generate an answer based on a query
+Query → SentenceTransformer → FAISS → Retrieved articles → Gemini/Ollama → Answer

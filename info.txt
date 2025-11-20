@@ -1,0 +1,8 @@
+RAG - Retrieval Augmented Generation
+It’s a technique where a chatbot or LLM doesn’t just rely on its own knowledge, 
+but retrieves relevant text/documents from your dataset first.
+
+FAISS - Facebook AI Similarity Search
+Library to store embeddings (vectors of your text) and quickly find the most similar ones to a query embedding.
+Without FAISS, your chatbot would have to manually compare your query with all articles → very slow.
+With FAISS, search happens in milliseconds, even with thousands of articles.
