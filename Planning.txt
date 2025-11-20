@@ -1,0 +1,11 @@
+Phase 1 of the project
+
+Researching about constitution, laws, articles, cases, judgements
+Collecting data from multiple platforms (web scraping, APIs, Databases)
+Storing the data in the form of csv file in the system
+
+Phase 2 of the project
+
+Converting the data into embeddings
+Storing them in the vector Databases
+choosing a vector database
