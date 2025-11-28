@@ -1,0 +1,27 @@
+Phase 2 of the project
+
+Converting the data into embeddings
+Storing them in the vector Databases
+Choosing a vector databases
+
+Detailed Explanation
+- The content is first converted into a list
+- Then it is splitted into legal chunks of (300-400 words).
+- The chunks are converted into embeddings 
+
+About Embeddings
+Embeddings are numerical vector representing the meaning of a sentence or a paragraph
+Machines can’t “understand” text like humans, but embeddings let them compare meaning mathematically.
+
+- These embeddings are saved in pickle (saving objects to disks and loading them back)
+- For Embeddings I have used SentenceTransformer library.
+- The library converts legal texts into vectors so that similiar meaning are close in vector space.
+
+- So when user enters a query, its converted to embeddings
+- After then FAISS searches for Similiar embeddings
+
+About FAISS
+- FAISS is facebook AI similiarity search
+- It is a library for efficiently searching through large sets of embeddings.
+- When you have thousands of legal articles and a user asks a query, 
+- FAISS quickly finds the most relevant embeddings instead of comparing every single one manually.

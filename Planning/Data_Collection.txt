@@ -1,0 +1,29 @@
+Phase 1 of the project: Data Collection
+
+Researching about constitution, laws, articles, cases, judgements
+Collecting data from multiple platforms (web scraping, APIs, Databases)
+The major platform from where data has been extracted is Indian Kanoon.
+
+Detailed Process
+
+A - The pages were inspected, all essential html tags were noted down
+B - The base URL with variable parameters were defined along with two lists where data would be stored
+C - A for loop was run where proper link was generated and then data and content were extracted from the link
+D - The data was stored under 2 different lists, converted to dataframe and then merged
+E - After merging the final dataset of the constitution articles were created.
+F - Next was to extract cases links from the Indian Kanoon website and create another dataset
+G - So for a particular query, whatever the top results were there, they were collected
+H - Queires include right to speech, some specific cases and such topics
+I - All query, case title and case URLs were collected
+
+Phase 3 of the project
+Load FAISS + article lookup
+Take a user query
+Convert query → embedding
+Search in FAISS
+Collect retrieved text
+Feed them to an LLM
+Generate an answer
+
+Industry Pipeline to generate an answer based on a query
+Query → SentenceTransformer → FAISS → Retrieved articles → Gemini → Answer
