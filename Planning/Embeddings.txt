@@ -2,22 +2,32 @@ Phase 2 of the project
 
 Converting the data into embeddings
 Storing them in the vector Databases
-Choosing a vector databases
 
 Detailed Explanation
-- The content is first converted into a list
+- The content column from the articles dataset is first converted into a list of python
 - Then it is splitted into legal chunks of (300-400 words).
 - The chunks are converted into embeddings 
+- These embeddings are saved in pickle (saving objects to disks and loading them back faster and efficiently)
+- For Embeddings I have used SentenceTransformer library.
+- The library converts legal texts into vectors so that similiar meaning are close in vector space.
 
 About Embeddings
 Embeddings are numerical vector representing the meaning of a sentence or a paragraph
 Machines can’t “understand” text like humans, but embeddings let them compare meaning mathematically.
+Embeddings are created using SentenceTransformer -> stored in FAISS index -> saved as a .pkl file
 
-- These embeddings are saved in pickle (saving objects to disks and loading them back)
-- For Embeddings I have used SentenceTransformer library.
-- The library converts legal texts into vectors so that similiar meaning are close in vector space.
+About Vector
+- A vector is a list of numbers that represent the meaning of a text
+Example
+[0.12, -0.87, 0.45, ...]  ← numerical form of a sentence
 
-- So when user enters a query, its converted to embeddings
+About Vector Database
+- Vector Database used in this project is FAISS
+- FAISS is not a permanent vector database like chroma,Pinecone and Weaviate
+- It is an in-memory vector store created by facebook AI
+
+Pratical Working
+- So when user enters a query, its converted to embeddings using SentenceTransformer library
 - After then FAISS searches for Similiar embeddings
 
 About FAISS
@@ -25,3 +35,6 @@ About FAISS
 - It is a library for efficiently searching through large sets of embeddings.
 - When you have thousands of legal articles and a user asks a query, 
 - FAISS quickly finds the most relevant embeddings instead of comparing every single one manually.
+
+Industry pipeline to use data.
+Data > List > Chunks > SentenceTransformer > Embeddings(vectors) > Vector Database(FAISS)

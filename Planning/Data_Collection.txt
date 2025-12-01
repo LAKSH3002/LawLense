@@ -16,14 +16,25 @@ G - So for a particular query, whatever the top results were there, they were co
 H - Queires include right to speech, some specific cases and such topics
 I - All query, case title and case URLs were collected
 
-Phase 3 of the project
-Load FAISS + article lookup
-Take a user query
-Convert query → embedding
-Search in FAISS
-Collect retrieved text
-Feed them to an LLM
-Generate an answer
 
-Industry Pipeline to generate an answer based on a query
-Query → SentenceTransformer → FAISS → Retrieved articles → Gemini → Answer
+There is one dataset used in this Project
+
+Dataset description
+Name: Articles_with_parts.csv
+3 columns: URL, title, and content
+This dataset is used and embedded in Gemini AI API model to give them context
+The model reads the embedded values and generates answers to the Queires
+Queries must be related to the articles and parts of the constitution of India.
+
+NOTE: There is one more dataset in the project
+
+Dataset description
+Name: case results basics
+3 columns: query, case title, case URL
+So there was one more column of content, but had to eliminate it because there were too many empty values.
+Like out of 1000s there were about 600-700 empty values, the extraction of data was not taking place properly
+Because the html tags differ in a lot of case pages
+So then I had to plan to create a case summarizer, rather than creating a chatbot.
+So this dataset is never used in this project, because of empty values.
+
+So a new set of code is writtent to summarize case based on the URL of the case given.

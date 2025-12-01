@@ -1,0 +1,8 @@
+Last part of this project is to create a summarizer
+
+I did not create a proper dataset of cases in the country
+Reason: Scraping was not being possible becasue of different html tags and data extracted was empty in maxiumum rows
+
+So I will be scraping data from the URL provided, followed by finding all the p tags from the html code
+These p tags will be stored inside a variable, and I have limited the amount of words
+Then this extracted content is feed into Gemini LLM, which is then summarized as per user instructions

@@ -1,0 +1,40 @@
+Phase 3 of the project: Creation of the Chatbot (RAG Pipeline)
+
+A - First Chatbot was created for Terminal questions and answers
+
+In order to get a chatbot type response in terminal, I have used API key of Gemini
+- Initially I researched about OpenAI, Perplexity AI, Ollama and then came up to Gemini API
+- Installed GenAI(google.generativeai) library to configure the Gemini API key. 
+- Read the faiss_index file, followed by reading articles csv file
+- Next relevant articles with respect to the query are retrieved from the embeddings(vector space) by encoding them
+- Further the API key of Gemini is loaded along with its model: gemini 2.5 flash
+- Next relevant articles extracted by FAISS (based on vectors space) is feed into Gemini model
+- An answer function is created in the code where prompt given to the model.
+- Then the answer is generated and displayed on the screen.
+
+B - Rag Pipeline (retrieval Augmented Generation) code
+
+The process is the same as the above chatbot process.
+The difference is that in the rag pipeline code, 
+there is a point where I can enter a query (allowing input from the used) 
+based on which a response is generated.
+
+Working of Project
+
+1 - User types a question
+2 - SentenceTransformer converts it to an embedding
+3 - FAISS finds top 3 matching articles by encoding the query and finding similarity
+4 - Gemini generates the answer using only retrieved text (passed from FAISS)
+5 - Answer is generated and dispalyed on the screen.
+
+Phase 3 of the project
+Loading FAISS + article lookup
+Take a user query
+Convert query → embedding(vectors)
+Search in FAISS(by encoding)
+Collect retrieved text (using a python function)
+Feed them to an LLM(Gemini model)
+Generate an answer(display it on screen)
+
+Industry Pipeline to generate an answer based on a query
+Query → SentenceTransformer(vector) → FAISS(encode) → Retrieved articles → Gemini(llm) → Answer
